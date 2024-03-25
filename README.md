@@ -144,6 +144,17 @@ Execute o seguinte comando para criar um novo projeto Angular:
 ng new nome-do-projeto
 ```
 
+Caso tenha a versão Angular 17 instalada, use o comando abaixo para criar o projeto com módulos.
+
+```bash
+ng new nome-do-projeto --standalone=false 
+```
+ou 
+
+```bash
+ng new nome-do-projeto --no-standalone 
+```
+
 O Angular CLI fará algumas perguntas sobre as configurações do projeto. Você pode optar por configurá-las conforme suas necessidades ou simplesmente pressionar "Enter" para utilizar as configurações padrão.
 
 Aguarde até que o processo de criação seja concluído. O Angular CLI criará a estrutura básica do projeto e instalará as dependências necessárias.
