@@ -26,8 +26,8 @@ Exemplos:
 
 As diretivas **NgStyle** e **NgClass** são diretivas de atributo usadas para alterar o estilo de qualquer elemento do DOM com base em alguma condição.
 
-[Documentação Oficial para NgStyle](https://angular.io/api/common/NgIf)
-[Documentação Oficial para NgClass](https://angular.io/api/common/NgClass)
+[Documentação Oficial para NgStyle](https://angular.dev/guide/directives#setting-inline-styles-with-ngstyle)
+[Documentação Oficial para NgClass](https://angular.dev/guide/directives#adding-and-removing-classes-with-ngclass)
 
 ### Diretivas de Estrutura
 
@@ -44,7 +44,7 @@ Exemplo:
 
 Aqui, **'\*ngIf'** é uma Diretiva de Estrutura que adiciona ou remove o elemento <div> com base no valor de **'mostrarElemento'**.
 
-[Documentação Oficial NgIf](https://angular.io/api/common/NgIf)
+[Documentação Oficial NgIf](https://angular.dev/guide/directives#adding-or-removing-an-element-with-ngif)
 
 #### Diretiva ngFor
 
@@ -68,7 +68,7 @@ Acessando o Índice:
 <div *ngFor="let item of itens; let i = index">Item {{ i }}: {{ item }}</div>
 ```
 
-[Documentação Oficial NgFor](https://angular.io/api/common/NgFor)
+[Documentação Oficial NgFor](https://angular.dev/guide/directives#listing-items-with-ngfor)
 
 #### Diretiva ngSwitch, ngSwitchCase e ngSwitchDefault
 
@@ -117,6 +117,9 @@ Aplicando o ngSwitch com números:
 </div>
 ```
 
+[Documentação Oficial NgSwitch](https://angular.dev/guide/directives#switching-cases-with-ngswitch)
+
+
 #### Diretiva Personalizada
 
 Você também pode criar suas próprias Diretivas personalizadas no Angular. Para isso, você precisa usar a função @Directive e implementar o código necessário para a diretiva.
@@ -161,6 +164,10 @@ Use o comando abaixo para criar diretivas.
 ```node
 ng generete directive <nomeDaDiretiva>
 ```
+
+[Documentação Oficial para construção de diretivas - projeto standalone](https://angular.dev/guide/directives/attribute-directives)
+
+[Documentação Oficial para construção de diretivas - projeto com módulos](https://angular.dev/guide/directives/attribute-directives)
 
 **Considerações Finais**
 
