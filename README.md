@@ -119,6 +119,42 @@ Aplicando o ngSwitch com números:
 
 [Documentação Oficial NgSwitch](https://angular.dev/guide/directives#switching-cases-with-ngswitch)
 
+#### Nova sintaxe para diretivas estruturais
+
+
+A partir do Angular 17, foi introduzida uma nova sintaxe para controle de fluxo nos templates, substituindo as diretivas estruturais tradicionais como *ngIf, *ngFor e *ngSwitch. Essa nova abordagem utiliza a sintaxe @if, @for e @switch, proporcionando uma maneira mais intuitiva e próxima do JavaScript para expressar lógica condicional e de repetição nos templates. 
+
+Exemplo de uso do @if @for @switch:
+
+````javascript
+@if (condicao) {
+  <!-- Conteúdo a ser exibido quando a condição for verdadeira -->
+} @else if (b > a) {
+  {{a}} is less than {{b}}
+} @else {
+  {{a}} is equal to {{b}}
+}
+
+@for (let item of lista) {
+  <!-- Conteúdo a ser repetido para cada item da lista -->
+} @empty {
+  <!-- Conteúdo a ser repetido quando a lista esta vazia -->
+}
+
+@switch (variavel) {
+  @case ('valor1') {
+    <!-- Conteúdo para o caso 'valor1' -->
+  }
+  @case ('valor2') {
+    <!-- Conteúdo para o caso 'valor2' -->
+  }
+  @default {
+    <!-- Conteúdo para o caso padrão -->
+  }
+}
+````
+
+
 
 #### Diretiva Personalizada
 
