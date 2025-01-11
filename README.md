@@ -144,17 +144,6 @@ Execute o seguinte comando para criar um novo projeto Angular:
 ng new nome-do-projeto
 ```
 
-Caso tenha a versão Angular 17 instalada, use o comando abaixo para criar o projeto com módulos.
-
-```bash
-ng new nome-do-projeto --standalone=false 
-```
-ou 
-
-```bash
-ng new nome-do-projeto --no-standalone 
-```
-
 O Angular CLI fará algumas perguntas sobre as configurações do projeto. Você pode optar por configurá-las conforme suas necessidades ou simplesmente pressionar "Enter" para utilizar as configurações padrão.
 
 Aguarde até que o processo de criação seja concluído. O Angular CLI criará a estrutura básica do projeto e instalará as dependências necessárias.
@@ -178,19 +167,16 @@ Você deverá ver a aplicação Angular em execução.
 
 ```
 nome-do-projeto/
-  |- e2e/
   |- node_modules/
+  |- public/
   |- src/
   |  |- app/
-  |  |  |- components/
-  |  |  |- services/
-  |  |  |- app.module.ts
-  |  |  |- app.component.ts
+  |  |  |- app.component.css
   |  |  |- app.component.html
-  |  |  |- app.component.scss
   |  |  |- app.component.spec.ts
-  |  |- assets/
-  |  |- environments/
+  |  |  |- app.component.ts
+  |  |  |- app.config.ts
+  |  |  |- app.routes.ts
   |  |- index.html
   |  |- main.ts
   |  |- styles.scss
@@ -203,31 +189,25 @@ Essa é a estrutura básica de um projeto Angular. Conforme você desenvolve a a
 
 **Explicação da Estrutura**:
 
- - **_e2e/_**: O diretório _"e2e"_ contém os testes end-to-end (e2e) escritos usando a ferramenta de teste Protractor. Esses testes permitem simular as ações do usuário e verificar se a aplicação funciona corretamente em um ambiente semelhante ao de produção.
-
  - **_node_modules/_**: Este é o diretório onde todas as dependências de pacotes npm são instaladas. Ele é criado automaticamente quando você executa npm install para baixar as dependências do projeto.
+
+- **_src/public/_**: O diretório "_assets_" contém recursos estáticos da aplicação, como imagens, arquivos JSON, entre outros.
 
 - **_src/_**: Este é o diretório principal onde o código-fonte da aplicação Angular está localizado.
 
 - **_src/app/_**: O diretório _"app"_ contém todos os componentes, serviços e arquivos relacionados à lógica da aplicação.
 
-- **_src/app/components/_**: Neste diretório, você pode organizar seus componentes em subdiretórios ou criar componentes individuais. Cada componente é composto por quatro arquivos: _.component.ts_, _.component.html_, _.component.css_ e _.component.spec.ts_.
-
-- **_src/app/services/_**: Neste diretório, você pode criar e organizar os serviços utilizados para compartilhar dados e lógica entre os componentes.
-
-- **_src/app/app.module.ts_**: O arquivo _"app.module.ts"_ é o módulo raiz da aplicação. Ele importa e declara os componentes, serviços e outros módulos utilizados pela aplicação.
-
-- **_src/app/app.component.ts_**: O arquivo _"app.component.ts"_ é o componente raiz da aplicação, que controla o template principal _"app.component.html"_ e a folha de estilo _"app.component.css"_.
+- **_src/app/app.component.css_**: O arquivo "_app.component.css_" contém estilos específicos do componente raiz.
 
 - **_src/app/app.component.html_**: O arquivo _"app.component.html"_ é o template principal da aplicação, que define a estrutura do DOM que será renderizada.
 
-- **_src/app/app.component.css_**: O arquivo "_app.component.css_" contém estilos específicos do componente raiz.
-
 - **_src/app/app.component.spec.ts_**: O arquivo "_app.component.spec.ts_" contém os testes unitários do componente raiz.
 
-- **_src/assets/_**: O diretório "_assets_" contém recursos estáticos da aplicação, como imagens, arquivos JSON, entre outros.
+- **_src/app/app.component.ts_**: O arquivo _"app.component.ts"_ é o componente raiz da aplicação, que controla o template principal _"app.component.html"_ e a folha de estilo _"app.component.css"_.
 
-- **_src/environments/_**: Aqui você encontrará configurações específicas de ambiente, como as variáveis de ambiente para diferentes ambientes de desenvolvimento, teste e produção.
+- **_src/app/app.config.ts_**: O arquivo "app.config.ts" é o arquivo de configuracao do componente app.
+
+- **_src/app/app.routes.ts_**: O arquivo "app.config.ts" é o arquivo usado para definir as rotas da aplicação, ou seja, a configuração que mapeia URLs para componentes específicos. 
 
 - **_src/index.html_**: O arquivo _"index.html"_ é a página HTML principal da aplicação, onde o aplicativo Angular é inicializado.
 
@@ -252,5 +232,5 @@ Aqui está a sugestão para a prática:
 
 *Requisitos*:
 
-- Construa seu ambinete de desenvolvimento no Windows, Linux ou WLS2
+- Construa seu ambiente de desenvolvimento com codespaces / devcontainers.
 - A aplicação deve ter a estrutura padrão de um projeto Angular.
